@@ -44,21 +44,21 @@ if __name__ == '__main__':
         if 'final' in state.keys():
             final_states.append(state['@name'])
 
-    alphabeth_set = set()
+    alphabet_set = set()
     activation_function = {}
     for transition in xml_transitions:
         from_state = id_to_state[transition['from']]
         to_state = id_to_state[transition['to']]
         value_received = transition['read']
 
-        alphabeth_set.add(value_received)
+        alphabet_set.add(value_received)
 
         if from_state not in activation_function.keys():
             activation_function[from_state] = {}
 
         activation_function[from_state][value_received] = to_state
 
-    alphabeth = list(alphabeth_set)
+    alphabet = list(alphabet_set)
 
     file = open(f'src/finite_automatas/{automata_name}.py', mode='w')
     file.write(f"""
@@ -66,7 +66,7 @@ from src.finite_automata import FiniteAutomata
 
 {automata_name} = FiniteAutomata(
     {states},
-    {alphabeth},
+    {alphabet},
     {activation_function},
     '{initial_state}',
     {final_states},

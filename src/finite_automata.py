@@ -2,20 +2,20 @@ import re
 
 
 class FiniteAutomata:
-    def __init__(self, states: [str], alphabeth: [str], activation_function: dict,
+    def __init__(self, states: [str], alphabet: [str], activation_function: dict,
                  initial_state: str, final_states: [str]):
 
         self.states = states
-        self.alphabeth = alphabeth
+        self.alphabet = alphabet
         self.activation_function = activation_function
         self.initial_state = initial_state
         self.final_states = final_states
 
     def execute(self, _input: str) -> bool:  # Python has input as a build-in function >:P
-        # Verify all input is on alphabeth
+        # Verify all input is on alphabet
         for char in set(_input):  # Using set to get only unique chars
             if self.alphabet_match(char) is None:
-                print(f'Input has chars outside of alphabet {self.alphabeth}, character {char}')
+                print(f'Input has chars outside of alphabet {self.alphabet}, character {char}')
                 return False
 
         current_state = self.initial_state
@@ -46,7 +46,7 @@ class FiniteAutomata:
         return next_state
 
     def alphabet_match(self, _input: str) -> str or None:
-        for expr in self.alphabeth:
+        for expr in self.alphabet:
             if re.search(expr, _input):
                 return expr
 
