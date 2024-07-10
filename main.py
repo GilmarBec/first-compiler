@@ -1,3 +1,5 @@
+# python3 main.py 0100
+
 import sys
 
 from src.finite_automatas.end_number import end_number
