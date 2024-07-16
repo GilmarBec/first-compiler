@@ -2,19 +2,10 @@
 
 import sys
 import xmltodict
+from os import listdir
 
 
-if __name__ == '__main__':
-    args = sys.argv[1:]
-
-    if len(args) < 1:
-        raise 'Jflap File path not given (arg 1)'
-    if len(args) < 2:
-        raise 'Automata unique name not given (arg 2)'
-
-    filename = args[0]
-    automata_name = args[1].replace(' ', '_')
-
+def convert(filename: str, automata_name: str):
     file = open(filename, "r")
     xml_dict = xmltodict.parse(file.read(), force_list=('initial', 'final'))
     file.close()
@@ -89,3 +80,19 @@ class {automata_name[0].upper() + automata_name[1:]}(unittest.TestCase):
     file.close()
 
     print('JFile sucessfully converted!  ˆ𐃷ˆ')
+
+
+if __name__ == '__main__':
+    args = sys.argv[1:]
+
+    if len(args) < 1:
+        files = listdir('./jflap')
+        for filename in files:
+            fa_name = filename[:-4]
+            convert(f"jflap/{filename}", fa_name)
+    elif len(args) < 2:
+        raise 'Automata unique name not given (arg 2)'
+    else:
+        filename = args[0]
+        automata_name = args[1].replace(' ', '_')
+        convert(filename, automata_name)

@@ -10,10 +10,10 @@ class FiniteAutomata:
 
     def execute(self, _input: str) -> bool:  # Python has input as a build-in function >:P
         # Verify all input is on alphabet
-        for char in set(_input):  # Using set to get only unique chars
-            if self.alphabet_match(char) is None:
-                print(f'Input has chars outside of alphabet {self.alphabet}, character {char}')
-                return False
+        # for char in set(_input):  # Using set to get only unique chars
+        #     if self.alphabet_match(char) is None:
+        #         print(f'Input has chars outside of alphabet {self.alphabet}, character {char}')
+        #         return False
 
         current_state = self.initial_state
         buffer = ''
