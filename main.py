@@ -2,8 +2,8 @@
 
 import sys
 
-from src.finite_automatas.end_number import end_number
+from src.finite_automatas.digits import digits
 
 if __name__ == '__main__':
     args = sys.argv[1:]
-    print(end_number.execute(args[0]))
+    print(digits.execute(args[0]))

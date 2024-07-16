@@ -1,6 +1,3 @@
-import re
-
-
 class FiniteAutomata:
     def __init__(self, states: [str], alphabet: [str], activation_function: dict,
                  initial_state: str, final_states: [str]):
@@ -47,7 +44,7 @@ class FiniteAutomata:
 
     def alphabet_match(self, _input: str) -> str or None:
         for expr in self.alphabet:
-            if re.search(expr, _input):
+            if expr == _input:
                 return expr
 
         return None

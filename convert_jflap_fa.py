@@ -59,10 +59,10 @@ if __name__ == '__main__':
         activation_function[from_state][value_received] = to_state
 
     alphabet = list(alphabet_set)
+    alphabet.sort()
 
     file = open(f'src/finite_automatas/{automata_name}.py', mode='w')
-    file.write(f"""
-from src.finite_automata import FiniteAutomata
+    file.write(f"""from src.finite_automata import FiniteAutomata
 
 {automata_name} = FiniteAutomata(
     {states},
@@ -71,6 +71,21 @@ from src.finite_automata import FiniteAutomata
     '{initial_state}',
     {final_states},
 )
-    """)
+""")
+    file.close()
+
+    file = open(f'test/finite_automatas/{automata_name}.py', mode='w')
+    file.write(f"""import unittest
+from src.finite_automatas.{automata_name} import {automata_name}
+
+
+class {automata_name[0].upper() + automata_name[1:]}(unittest.TestCase):
+    def test_success(self):
+        self.assertTrue({automata_name}.execute('&$*#%&')) # Arruma isso
+
+    def test_failure(self):
+        self.assertFalse({automata_name}.execute('')) # Arruma isso
+""")
+    file.close()
 
     print('JFile sucessfully converted!  ˆ𐃷ˆ')
