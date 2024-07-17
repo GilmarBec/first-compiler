@@ -16,7 +16,7 @@
 		<transition>
 			<from>0</from>
 			<to>1</to>
-			<read>;</read>
+			<read>(</read>
 		</transition>
 	</automaton>
 </structure>

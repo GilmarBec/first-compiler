@@ -7,7 +7,7 @@ from os import listdir
 
 def convert(filename: str, automata_name: str):
     file = open(filename, "r")
-    xml_dict = xmltodict.parse(file.read(), force_list=('initial', 'final'))
+    xml_dict = xmltodict.parse(file.read(), force_list=('initial', 'final', 'transition'))
     file.close()
 
     # print(xml_dict['structure']['automaton'])

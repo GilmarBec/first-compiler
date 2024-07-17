@@ -3,13 +3,17 @@
 	<automaton>
 		<!--The list of states.-->
 		<state id="0" name="q0">
-			<x>603.0</x>
-			<y>809.0</y>
+			<x>108.0</x>
+			<y>1178.0</y>
 			<initial/>
 		</state>
 		<state id="1" name="q1">
-			<x>909.0</x>
-			<y>809.0</y>
+			<x>513.0</x>
+			<y>1179.0</y>
+		</state>
+		<state id="3" name="q3">
+			<x>791.0</x>
+			<y>1181.0</y>
 			<final/>
 		</state>
 		<!--The list of transitions.-->
@@ -64,9 +68,19 @@
 			<read>9</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>W</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>A</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>V</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -74,9 +88,19 @@
 			<read>B</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>U</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>C</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>T</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -84,9 +108,19 @@
 			<read>D</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>S</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>E</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>R</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -94,14 +128,29 @@
 			<read>F</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>Q</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>G</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>P</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>H</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>_</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -129,9 +178,19 @@
 			<read>M</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>Z</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>N</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>Y</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -139,9 +198,19 @@
 			<read>O</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>X</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>P</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>G</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -149,9 +218,19 @@
 			<read>Q</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>F</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>R</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>E</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -159,9 +238,19 @@
 			<read>S</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>D</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>T</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>C</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -169,9 +258,19 @@
 			<read>U</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>B</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>V</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>A</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -184,9 +283,19 @@
 			<read>X</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>O</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>Y</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>N</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -194,9 +303,49 @@
 			<read>Z</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>M</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>L</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>K</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>J</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>I</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>_</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>H</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>w</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>v</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -204,14 +353,29 @@
 			<read>a</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>u</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>b</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>t</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>c</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>s</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -220,13 +384,33 @@
 		</transition>
 		<transition>
 			<from>1</from>
+			<to>3</to>
+			<read>(</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>r</read>
+		</transition>
+		<transition>
+			<from>1</from>
 			<to>1</to>
 			<read>e</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>q</read>
 		</transition>
 		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>f</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>p</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -259,9 +443,19 @@
 			<read>l</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>z</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>m</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>y</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -269,9 +463,19 @@
 			<read>n</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>x</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>o</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>g</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -279,9 +483,19 @@
 			<read>p</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>f</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>q</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>e</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -289,9 +503,19 @@
 			<read>r</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>d</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>s</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>c</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -299,9 +523,19 @@
 			<read>t</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>b</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>u</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>a</read>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -314,19 +548,14 @@
 			<read>w</read>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>o</read>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>x</read>
-		</transition>
-		<transition>
-			<from>1</from>
-			<to>1</to>
-			<read>y</read>
-		</transition>
-		<transition>
-			<from>1</from>
-			<to>1</to>
-			<read>z</read>
 		</transition>
 		<transition>
 			<from>0</from>
@@ -334,9 +563,19 @@
 			<read>n</read>
 		</transition>
 		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read>y</read>
+		</transition>
+		<transition>
 			<from>0</from>
 			<to>1</to>
-			<read>o</read>
+			<read>m</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read>z</read>
 		</transition>
 		<transition>
 			<from>0</from>
@@ -346,7 +585,7 @@
 		<transition>
 			<from>0</from>
 			<to>1</to>
-			<read>m</read>
+			<read>k</read>
 		</transition>
 		<transition>
 			<from>0</from>
@@ -356,242 +595,12 @@
 		<transition>
 			<from>0</from>
 			<to>1</to>
-			<read>k</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>h</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
 			<read>i</read>
 		</transition>
 		<transition>
 			<from>0</from>
 			<to>1</to>
-			<read>f</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>g</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>d</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>e</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>b</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>c</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>a</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>z</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>x</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>y</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>v</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>w</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>t</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>u</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>r</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>s</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>p</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>q</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>N</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>O</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>L</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>M</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>J</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>K</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>H</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>I</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>F</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>G</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>D</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>E</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>B</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>C</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>A</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>_</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>Z</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>X</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>Y</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>V</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>W</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>T</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>U</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>R</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>S</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>P</read>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>Q</read>
+			<read>h</read>
 		</transition>
 	</automaton>
 </structure>

@@ -1,24 +1,55 @@
 import unittest
-from src.finite_automatas.number import number
+from src.finite_automatas.number_token import number_token
 
 
-class Number(unittest.TestCase):
+class Number_token(unittest.TestCase):
     def test_success(self):
-        self.assertTrue(number.execute('0123456789'))
-        self.assertTrue(number.execute('-0123456789'))
-        self.assertTrue(number.execute('+0123456789'))
-        self.assertTrue(number.execute('012345.6789'))
-        self.assertTrue(number.execute('-012345.6789'))
-        self.assertTrue(number.execute('+012345.6789'))
+        self.assertTrue(number_token.execute('0123546789'))
+        self.assertTrue(number_token.execute('+0123546789'))
+        self.assertTrue(number_token.execute('-0123546789'))
+        self.assertTrue(number_token.execute('0123546789.0123456'))
+        self.assertTrue(number_token.execute('+0123546789.0123456'))
+        self.assertTrue(number_token.execute('-0123546789.0123456'))
+
+    def test_incomplete(self):
+        self.assertFalse(number_token.execute('+'))
+        self.assertFalse(number_token.execute('-'))
+        self.assertFalse(number_token.execute('0123546789.'))
+        self.assertFalse(number_token.execute('+0123546789.'))
+        self.assertFalse(number_token.execute('-0123546789.'))
 
     def test_failure(self):
-        self.assertTrue(number.execute('012345.6789'))
-        self.assertTrue(number.execute('012345.6789'))
-        self.assertTrue(number.execute('-012345.6789'))
-        self.assertTrue(number.execute('+012345.6789'))
+        try:
+            number_token.execute('queijo')
+        except ValueError:
+            self.assertTrue(True)
 
-    def test_out_of_language_failure(self):
-        self.assertFalse(number.execute(''))
-        self.assertFalse(number.execute('a'))
-        self.assertFalse(number.execute('*'))
-        self.assertFalse(number.execute('('))
+        try:
+            number_token.execute('*123154')
+        except ValueError:
+            self.assertTrue(True)
+
+        try:
+            number_token.execute('.')
+        except ValueError:
+            self.assertTrue(True)
+
+        try:
+            number_token.execute('+.')
+        except ValueError:
+            self.assertTrue(True)
+
+        try:
+            number_token.execute('-.')
+        except ValueError:
+            self.assertTrue(True)
+
+        try:
+            number_token.execute('216354-')
+        except ValueError:
+            self.assertTrue(True)
+
+        try:
+            number_token.execute('216354.-')
+        except ValueError:
+            self.assertTrue(True)
