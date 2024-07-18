@@ -2,6 +2,7 @@
 
 import sys
 
+from src.parser import parse
 from src.tokenizator import tokenize
 
 if __name__ == '__main__':
@@ -13,4 +14,12 @@ if __name__ == '__main__':
 
     clean_data = data.replace(' ', '').replace('\n', '')
 
-    print([str(x) for x in tokenize(clean_data)])
+    tokens = tokenize(clean_data)
+
+    print('\n'.join([str(x) for x in tokens]))
+    print('\n\n')
+
+    try:
+        print('Success:', parse(tokens))
+    except ValueError:
+        print('Faio >:(')

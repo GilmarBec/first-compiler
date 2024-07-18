@@ -1,4 +1,4 @@
-from src.finite_automata_translator import finite_automatas_translator
+from src.dictionaries import finite_automatas_translator
 
 
 class Token:
@@ -52,7 +52,7 @@ def tokenize(_input: str):
                 break
 
         token = Token(current_fa[1], buffer)
-        print('_input', _input, str(token))
+        # print('_input', _input, str(token))
         tokens.append(token)
 
         if buffer == _input:
