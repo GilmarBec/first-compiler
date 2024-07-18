@@ -1,5 +1,4 @@
 from src.finite_automata_translator import finite_automatas_translator
-from src.finite_automatas.close_braces_token import close_braces_token
 
 
 class Token:
@@ -24,11 +23,13 @@ def tokenize(_input: str):
             for index, fa in enumerate(incomplete_fas):
                 try:
                     if fa[0].execute(buffer):
-                        current_fa = fa
+                        if current_fa is None or fa[2] >= current_fa[2]:
+                            current_fa = fa
                         fa_to_remove.append(index)
                 except ValueError:
                     fa_to_remove.append(index)
 
+            # Evitar "index out of bounds"
             fa_to_remove.reverse()
             for index in fa_to_remove:
                 del incomplete_fas[index]
