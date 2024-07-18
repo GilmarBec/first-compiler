@@ -158,15 +158,15 @@ def parse(input_tokens: [Token or str], stack=None):
             raise ValueError(error_msg)
         else:
             next_not_terminal = stack.pop(0)
-            if next_not_terminal == 'IF_TOKEN':
+            if next_not_terminal == 'IFSTMT':
                 cases = (
-                    ['if', '(', 'EXPR', ')', 'STMT', 'else', 'STMT'],
-                    ['if', '(', 'EXPR', ')', 'STMT'],
+                    ['IF_TOKEN', 'OPEN_PARENTHESES_TOKEN', 'EXPR', 'CLOSE_PARENTHESES_TOKEN', 'STMT', 'ELSE_TOKEN', 'STMT'],
+                    ['IF_TOKEN', 'OPEN_PARENTHESES_TOKEN', 'EXPR', 'CLOSE_PARENTHESES_TOKEN', 'STMT'],
                 )
 
                 try:
                     print(f'trying to add to stack {next_not_terminal} -> {' '.join(cases[0])}')
-                    return parse(input_tokens, cases[0] + stack)
+                    return parse([Token(x.type, x.value) for x in input_tokens], cases[0] + stack)
                 except ValueError:
                     print(f'trying to add to stack {next_not_terminal} -> {' '.join(cases[1])}')
                     return parse(input_tokens, cases[1] + stack)

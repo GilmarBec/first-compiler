@@ -20,7 +20,7 @@ from src.finite_automatas.print_token import print_token
 from src.finite_automatas.return_token import return_token
 from src.finite_automatas.semicolon_token import semicolon_token
 
-# fa, token_name, priority
+# (fa, token_name, priority)
 finite_automatas_translator = [
     (close_braces_token, 'CLOSE_BRACES_TOKEN', 1),
     (close_parentheses_token, 'CLOSE_PARENTHESES_TOKEN', 1),
