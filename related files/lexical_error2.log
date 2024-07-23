@@ -1,0 +1,6 @@
+> python main.py example/lexical_error2.ls
+None FAs could recognize the following input:  #Comentáriosnãoprevistosn
+
+Last token OPEN_BRACES_TOKEN: {
+position 15
+Lexical Error on Line 3, column 4

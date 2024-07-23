@@ -1,0 +1,56 @@
+> python main.py example/syntactic_error2.lsi
+
+INT_TOKEN: int
+ID_TOKEN: a
+SEMICOLON_TOKEN: ;
+INT_TOKEN: int
+ID_TOKEN: b
+SEMICOLON_TOKEN: ;
+ID_TOKEN: a
+EQUAL_TOKEN: =
+NUMBER_TOKEN: 10
+SEMICOLON_TOKEN: ;
+ID_TOKEN: b
+EQUAL_TOKEN: =
+NUMBER_TOKEN: 5
+SEMICOLON_TOKEN: ;
+DEF_TOKEN: def
+ID_OPEN_PARENTHESES_TOKEN: soma(
+CLOSE_PARENTHESES_TOKEN: )
+OPEN_PARENTHESES_TOKEN: (
+ID_TOKEN: retura
+PLUS_TOKEN: +
+ID_TOKEN: b
+CLOSE_PARENTHESES_TOKEN: )
+DEF_TOKEN: def
+ID_OPEN_PARENTHESES_TOKEN: subtracao(
+CLOSE_PARENTHESES_TOKEN: )
+OPEN_BRACES_TOKEN: {
+RETURN_TOKEN: return
+ID_TOKEN: a
+MINUS_TOKEN: -
+ID_TOKEN: c
+CLOSE_BRACES_TOKEN: }
+DEF_TOKEN: def
+ID_OPEN_PARENTHESES_TOKEN: multiplicacao(
+CLOSE_PARENTHESES_TOKEN: )
+OPEN_BRACES_TOKEN: {
+RETURN_TOKEN: return
+ID_TOKEN: a
+MULTIPLICATION_TOKEN: *
+ID_TOKEN: b
+CLOSE_BRACES_TOKEN: } 
+
+
+Add 2 stack: MAIN -> STMT
+Add 2 stack: STMT -> INT_TOKEN ID_TOKEN SEMICOLON_TOKEN
+Match found: INT_TOKEN: int
+Match found: ID_TOKEN: a
+Match found: SEMICOLON_TOKEN: ;
+
+
+Success: False
+
+
+> # Retornou falso pq a linguagem não permite lista de STMTs no corpo do arquivo (fora de um def)
+> # A máquina encerrou primeiro com os tokens, encontrando um caminho, mas não chegou ao fim do input

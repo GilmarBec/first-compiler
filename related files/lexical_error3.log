@@ -1,0 +1,6 @@
+> python main.py example/lexical_error3.ls
+None FAs could recognize the following input:  .5;#númeroscompontoflutua
+
+Last token NUMBER_TOKEN: 10
+position 14
+Lexical Error on Line 4, column 6

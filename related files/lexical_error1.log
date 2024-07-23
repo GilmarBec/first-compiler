@@ -1,0 +1,6 @@
+> python main.py example/lexical_error1.lsi
+None FAs could recognize the following input:  :#Erroléxico:':'{returx+y
+
+Last token CLOSE_PARENTHESES_TOKEN: )
+position 28
+Lexical Error on Line 7, column 10
