@@ -1,0 +1,16 @@
+def principal ()
+{
+    # Comentários não previstos na linguagem
+	1st_int A ;
+
+	A = +3.14159265359;
+    B = +; # deveria receber variável
+    C = func1 (C , D );
+
+	fi C > 50: # operador deveria ser "if"
+		D = maior
+	else:
+		D = menor
+    return S;
+	print T # variável não definida
+}

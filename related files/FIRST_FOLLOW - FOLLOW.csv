@@ -1,0 +1,11 @@
+MAIN,FLIST,FLIST '',FDEF,PARLIST,"PARLIST """,STMT,ATRIBST,"ATRIBST """,FCALL,PARLISTCALL,"PARLISTCALL """,PRINTST,RETURNST,IFSTMT,STMTLIST,"STMTLIST """,EXPR,"EXPR """,NUMEXPR,"NUMEXPR """,TERM,"TERM """,FACTOR
+$,$,$,$,),),$,;,;,;,),),;,;,$,},},;,;,<,<,+,+,+
+,,,def,,,else,,,,,,,,else,,,),),>,>,-,-,-
+,,,,,,},,,,,,,,},,,,,==,==,<,<,<
+,,,,,,int,,,,,,,,int,,,,,;,;,>,>,>
+,,,,,,{,,,,,,,,{,,,,,),),==,==,==
+,,,,,,;,,,,,,,,;,,,,,,,;,;,;
+,,,,,,id,,,,,,,,id,,,,,,,),),)
+,,,,,,print,,,,,,,,print,,,,,,,,,*
+,,,,,,return,,,,,,,,return,,,,,,,,,
+,,,,,,if,,,,,,,,if,,,,,,,,,

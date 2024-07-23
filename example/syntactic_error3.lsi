@@ -1,0 +1,17 @@
+def soma()
+(
+    retur a + b
+)
+def subtracao()
+{
+    return a - c
+}
+def multiplicacao()
+{
+    return a * b
+}
+
+int a ;
+int b ;
+a = 10 ;
+b = 5 ;
