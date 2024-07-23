@@ -2,6 +2,7 @@ from src.finite_automatas.close_braces_token import close_braces_token
 from src.finite_automatas.close_parentheses_token import close_parentheses_token
 from src.finite_automatas.comma_token import comma_token
 from src.finite_automatas.def_token import def_token
+from src.finite_automatas.else_token import else_token
 from src.finite_automatas.equal_equal_token import equal_equal_token
 from src.finite_automatas.equal_token import equal_token
 from src.finite_automatas.greater_token import greater_token
@@ -32,6 +33,7 @@ finite_automatas_translator = [
     (id_open_parentheses_token, 'ID_OPEN_PARENTHESES_TOKEN', 0),
     (id_token, 'ID_TOKEN', 0),
     (if_token, 'IF_TOKEN', 1),
+    (else_token, 'ELSE_TOKEN', 1),
     (int_token, 'INT_TOKEN', 1),
     (less_token, 'LESS_TOKEN', 1),
     (minus_token, 'MINUS_TOKEN', 1),

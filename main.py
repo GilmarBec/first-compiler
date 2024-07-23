@@ -5,21 +5,57 @@ import sys
 from src.parser import parse
 from src.tokenizator import tokenize
 
-if __name__ == '__main__':
-    args = sys.argv[1:]
 
+def find_lexical_error_coordinates(position, data):
+    line = 1
+    column = 1
+    clean_index = 0
+    print('position', position)
+
+    for char in data:
+        if char == '\n':
+            line += 1
+            column = 0
+            continue
+
+        if char == ' ':
+            column += 1
+            continue
+
+        if char == '\t':
+            column += 4
+            continue
+
+        if position <= clean_index:
+            break
+
+        column += 1
+        clean_index += 1
+    print(f'Lexical Error on Line {line}, column {column}')
+    sys.exit(1)
+
+
+def execute(args):
     file = open(args[0], 'r')
     data = file.read()
     file.close()
 
-    clean_data = data.replace(' ', '').replace('\n', '')
+    clean_data = data.replace(' ', '').replace('\n', '').replace('\t', '')
 
-    tokens = tokenize(clean_data)
+    success, res = tokenize(clean_data)
 
-    print('\n'.join([str(x) for x in tokens]))
-    print('\n\n')
+    if not success:
+        find_lexical_error_coordinates(res, data)
+
+    tokens = res
+
+    print('\n'.join([str(x) for x in tokens]), '\n\n')
 
     try:
-        print('Success:', parse(tokens))
+        print('\n\nSuccess:', parse(tokens))
     except ValueError:
-        print('Faio >:(')
+        print('\n\nFail >:(')
+
+
+if __name__ == '__main__':
+    execute(sys.argv[1:])

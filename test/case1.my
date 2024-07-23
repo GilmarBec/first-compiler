@@ -1,6 +1,0 @@
-def func1 ( int A , int B )
-{
-    int C = A + B ;
-    int D = B * C ;
-    return ;
-}

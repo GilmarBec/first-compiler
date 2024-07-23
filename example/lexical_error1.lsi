@@ -1,0 +1,23 @@
+int x ;
+int y ;
+
+x = 10 ;
+y = 5 ;
+
+def soma(): # Erro léxico: ':'
+{
+    retur x + y  # Erro léxico: 'retur' em vez de 'return'
+}
+def subtracao(): # Erro léxico: ':'
+{
+    return a - b
+}
+def multiplicacao(): # Erro léxico: ':'
+{
+    return a * b
+}
+
+
+print soma
+print subtracao
+print multiplicacao

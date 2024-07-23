@@ -1,0 +1,18 @@
+def principal ()
+{
+    int C ;
+    int D ;
+    int R ;
+	int S ;
+
+	C = +3;
+    D = +;
+    R = func1 (C , D );
+
+	fi R > 50
+		S = maior
+	else
+		S = menor
+    return S;
+	print T
+}

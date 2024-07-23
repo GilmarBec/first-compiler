@@ -1,0 +1,53 @@
+def calc (int a, int b, int op, int res) {
+    if (op == 0)
+        res = a + b * 2;
+        print a + b * 2;
+        return;
+
+    if (op == 1)
+        res = a + b * -2;
+        print(a + b * -2);
+        return;
+
+    res = (a * b) * 3;
+    print (a * b) * 3;
+    return;
+}
+
+def principal (int current_score, int previous_score, int previous_multiplier) {
+    int operation;
+    int score;
+    score = 0;
+
+    int multiplier;
+    multiplier = 5;
+
+    if (previous_multiplier > multiplier)
+        if(current_score < multiplier * (multiplier + 50))
+            multiplier = previous_multiplier;
+
+    int true_score;
+    operation = 1;
+    true_score = calc(previous_score, multiplier, operation);
+
+    if (current_score > (true_score + 2))
+        print(400);
+        operation = 1;
+        score = calc(previous_score, multiplier, operation);
+        return;
+
+    operation = 2;
+    score = calc(previous_score, multiplier, operation);
+
+    if (score > 25000) {
+        print 1;
+        return;
+    }
+    if (score < 10) {
+        print 0;
+        return;
+    }
+
+    print(1245);
+    return;
+}

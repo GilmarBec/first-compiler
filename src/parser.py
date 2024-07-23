@@ -66,7 +66,7 @@ ll1 = {
         'RETURN_TOKEN': ['RETURN_TOKEN'],
     },
     'IFSTMT': {
-        'IF_TOKEN': ['IF_TOKEN', 'OPEN_PARENTHESES_TOKEN', 'EXPR', 'CLOSE_PARENTHESES_TOKEN', 'STMT', 'else', 'STMT'],
+        'IF_TOKEN': ['IF_TOKEN', 'OPEN_PARENTHESES_TOKEN', 'EXPR', 'CLOSE_PARENTHESES_TOKEN', 'STMT', 'ELSE_TOKEN', 'STMT'],
         # 'IF_TOKEN': ['IF_TOKEN', 'OPEN_PARENTHESES_TOKEN', 'EXPR', 'CLOSE_PARENTHESES_TOKEN', 'STMT'],
     },
     'STMTLIST': {
@@ -149,11 +149,13 @@ def parse(input_tokens: [Token or str], stack=None):
             stack.pop(0)
             input_tokens.pop(0)
         elif stack[0] not in ll1.keys():
-            error_msg = f"Not terminal on stack didn't match[{stack[0]}]"
+            error_msg = f"Expected: {stack[0]} gotten {input_tokens[0]}"
             print(error_msg)
             raise ValueError(error_msg)
         elif input_tokens[0].type not in ll1[stack[0]].keys():
-            error_msg = f"Production not found, {stack[0]} -> {input_tokens[0].type}"
+            error_msg = (f"\n\nProduction not found, {stack[0]} -> {input_tokens[0].type}\n"
+                         f"Expected: {stack[0]} -> {' | '.join(ll1[stack[0]].keys())}\n"
+                         f"Gotten: {input_tokens[0]}")
             print(error_msg)
             raise ValueError(error_msg)
         else:

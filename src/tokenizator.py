@@ -12,6 +12,8 @@ class Token:
 
 def tokenize(_input: str):
     tokens = []
+    # Marks position that raise error
+    position = 0
 
     while len(_input) > 0:
         current_fa = None
@@ -38,8 +40,10 @@ def tokenize(_input: str):
                 break
 
         if current_fa is None:
-            print('None FAs could recognize this input', _input)
-            raise ValueError('None FAs could recognize this input')
+            print('None FAs could recognize the following input: ', _input[:25], "\n")
+            print('Last token', tokens[-1])
+            return False, position
+            # raise ValueError('None FAs could recognize this input')
 
         buffer = ''
         for index, char in enumerate(_input):
@@ -47,6 +51,7 @@ def tokenize(_input: str):
             try:
                 current_fa[0].execute(buffer)
             except ValueError:
+                position += index
                 _input = _input[index:]
                 buffer = buffer[:-1]
                 break
@@ -58,4 +63,4 @@ def tokenize(_input: str):
         if buffer == _input:
             _input = ''
 
-    return tokens
+    return True, tokens
